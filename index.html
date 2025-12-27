@@ -11,11 +11,36 @@
     <script src="script.js"></script>
     <title>QuizApp</title>
   </head>
-  <body>
+  <body onload="init()">
     <nav class="navbar bg-body-tertiary">
       <div class="container-fluid">
         <span class="navbar-brand mb-0 h1">QuizApp</span>
       </div>
     </nav>
+    <div class="container">
+      <div class="card quiz-card">
+        <img src="./assets/quiz.png" class="card-img-top" />
+        <div class="card-body">
+          <h5 id="questionText" class="card-title">Frage</h5>
+
+          <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
+            <div id="answer_1" class="card-body">Antwort</div>
+          </div>
+          <div class="card quiz-answer-card mb-2" onclick="answer('answer_2')">
+            <div id="answer_2" class="card-body">Antwort</div>
+          </div>
+          <div class="card quiz-answer-card mb-2" onclick="answer('answer_3')">
+            <div id="answer_3" class="card-body">Antwort</div>
+          </div>
+          <div class="card quiz-answer-card mb-2" onclick="answer('answer_4')">
+            <div id="answer_4" class="card-body">Antwort</div>
+          </div>
+          <div class="question-footer">
+            <span> <b>1</b> von <b id="all-questions">5</b> Fragen </span>
+            <button class="btn btn-outline-primary">nächste Frage</button>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

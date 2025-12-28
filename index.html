@@ -19,8 +19,17 @@
     </nav>
     <div class="container">
       <div class="card quiz-card">
-        <img src="./assets/quiz.png" class="card-img-top" />
-        <div class="card-body">
+        <img src="./assets/quiz.png" id="header-image" class="card-img-top" />
+
+        <div class="card-body" id="endScreen" style="display: none">
+          <div class="text-center final-scene">Quiz beendet!</div>
+
+          <div class="text-center">
+            Du hast <span id="correctAnswers">0</span> von
+            <span id="totalQuestions">0</span> richtig beantwortet.
+          </div>
+        </div>
+        <div class="card-body" id="questionBody">
           <h5 id="questionText" class="card-title">Frage</h5>
 
           <div class="card quiz-answer-card mb-2" onclick="answer('answer_1')">
@@ -36,8 +45,18 @@
             <div id="answer_4" class="card-body">Antwort</div>
           </div>
           <div class="question-footer">
-            <span> <b>1</b> von <b id="all-questions">5</b> Fragen </span>
-            <button class="btn btn-outline-primary">nächste Frage</button>
+            <span>
+              <b id="question-number">1</b> von
+              <b id="all-questions">5</b> Fragen
+            </span>
+            <button
+              onclick="nextQuestion()"
+              class="btn btn-outline-primary"
+              id="next-button"
+              disabled
+            >
+              Nächste Frage
+            </button>
           </div>
         </div>
       </div>

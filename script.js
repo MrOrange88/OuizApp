@@ -61,7 +61,7 @@ function answer(selectedAnswer) {
   let question = questions[currentQuestion];
   let selectedAnswerNumber = selectedAnswer.slice(-1);
 
-  idOfRightAnswer = "answer_" + question["right_answer"];
+  let idOfRightAnswer = "answer_" + question["right_answer"];
 
   if (rightAnswerSelected(selectedAnswerNumber, question)) {
     document
